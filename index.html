@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="noise"></div>
+
+    <div class="orbs">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <main class="wrap">
+        <div class="card">
+            <header>
+                <h1>Tic-Tac-Toe</h1>
+                <p>Rule of 3</p>
+                <button id="helpBtn">?</button>
+            </header>
+
+            <div class="players">
+                <div id="xCard" class="active">
+                    <div class="icon">✕</div>
+                    <div>
+                        <div style="font-size:0.9rem;font-weight:600">Player X</div>
+                        <span><b id="xCnt">0</b>/3 pieces</span>
+                    </div>
+                </div>
+
+                <div class="vs"><i></i>vs<i></i></div>
+
+                <div id="oCard">
+                    <div class="icon">○</div>
+                    <div>
+                        <div style="font-size:0.9rem;font-weight:600">Player O</div>
+                        <span><b id="oCnt">0</b>/3 pieces</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="msg"></div>
+
+            <div id="grid"></div>
+
+            <div class="btns">
+                <button id="resetBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                        <path d="M3 3v5h5" />
+                    </svg>
+                    New Game
+                </button>
+                <button id="rulesBtn">📖 Rules</button>
+            </div>
+        </div>
+
+        <footer>built during mass of mass</footer>
+    </main>
+
+    <div class="overlay hide" id="winModal">
+        <div class="modal">
+            <div class="trophy">🏆</div>
+            <h2 id="winTxt">X Wins!</h2>
+            <p>gg</p>
+            <button id="againBtn" style="width:100%;background:rgba(255,255,255,0.08)">Play Again</button>
+        </div>
+    </div>
+
+    <div class="overlay hide" id="helpModal">
+        <div class="modal">
+            <div class="top">
+                <h2>How to Play</h2>
+                <button class="close" id="closeBtn">✕</button>
+            </div>
+
+            <h3>Rules</h3>
+            <ul>
+                <li>Take turns placing <b>X</b> or <b>O</b></li>
+                <li>Max <b>3 pieces</b> per player on board</li>
+                <li>4th piece = oldest one disappears</li>
+                <li>Can't place where your piece is vanishing</li>
+                <li><b>3 in a row</b> wins</li>
+            </ul>
+
+            <div class="tip">The <b>dimmed pulsing piece</b> is your oldest - it'll vanish when you place your next one</div>
+
+            <button class="gotit" id="gotitBtn">Got it!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
