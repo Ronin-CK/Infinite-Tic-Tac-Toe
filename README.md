@@ -1,5 +1,7 @@
 # Infinite Tic-Tac-Toe
 
+https://ronin-ck.github.io/Infinite-Tic-Tac-Toe/
+
 An extended version of Tic-Tac-Toe played on an infinite grid instead of a fixed 3×3 board.
 
 ## Key Features
